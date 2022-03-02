@@ -4,12 +4,12 @@ application.
 */
 // The following is a context variable to be shared between components
 const UserContext = React.createContext(null);
-
+const Route = ReactRouterDOM.Route;
+const Link = ReactRouterDOM.Link;
+const HashRouter = ReactRouterDOM.HashRouter;
 
 function Spa() {
-    const Route = ReactRouterDOM.Route;
-    const Link = ReactRouterDOM.Link;
-    const HashRouter = ReactRouterDOM.HashRouter;
+    
 
     
 
@@ -24,9 +24,7 @@ function Spa() {
                 Create the links 
                 
                 */}
-                <Link to="/">Home</Link> --
-                <Link to="/about/">About</Link> --
-                <Link to="/products/">Products</Link> --
+                <Nav/>
                 <hr/>
                 {/* 
                 
