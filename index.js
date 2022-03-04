@@ -1,5 +1,5 @@
 function Spa() {
-    
+
 
     
 
@@ -12,7 +12,8 @@ function Spa() {
                       email:'gjosephs@mit.edu',
                       password:'secret',
                       balance:100 }
-                ]
+                ],
+                currentUser: null
                 }
             }>
             <Route path="/" exact           component={Home}/>
