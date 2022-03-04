@@ -13,7 +13,8 @@ function Spa() {
                       password:'secret',
                       balance:100 }
                 ],
-                currentUser: null
+                currentUser: null,
+                userIndex: null
                 }
             }>
             <Route path="/" exact           component={Home}/>

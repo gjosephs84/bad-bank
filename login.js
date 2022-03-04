@@ -33,6 +33,7 @@ function Login() {
                 if (ctx.users[i].password == password) {
                     foundUser = ctx.users[i];
                     ctx.currentUser = foundUser;
+                    ctx.userIndex = i;
                     console.log("Found the user!!!!");
                     console.log(JSON.stringify(foundUser));
                     setShow(false);
@@ -55,6 +56,7 @@ function Login() {
         setPassword('');
         setShow(true);
         ctx.currentUser = null;
+        ctx.userIndex = null;
     }
 
     return (
