@@ -3,6 +3,22 @@ const Link = ReactRouterDOM.Link;
 const HashRouter = ReactRouterDOM.HashRouter;
 const UserContext = React.createContext(null);
 
+const datedTransaction = (amount) => {
+    const date = new Date();
+    const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
+    const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+    const transaction = {
+        amount: amount,
+        month: month,
+        day: day,
+        year: year,
+        hour: hour,
+        minutes: minutes,
+        seconds: seconds
+    }
+    return transaction
+};
+
 function Card(props){
     function classes() {
         const bg = props.bgcolor ? ' bg-' + props.bgcolor : ' ';

@@ -11,7 +11,8 @@ function Spa() {
                     { name:'Gregory',
                       email:'gjosephs@mit.edu',
                       password:'secret',
-                      balance:100 }
+                      balance:100,
+                      history:[] }
                 ],
                 currentUser: null,
                 userIndex: null

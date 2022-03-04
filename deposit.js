@@ -16,6 +16,9 @@ function Deposit() {
         let i = ctx.userIndex;
         let currentBalance = Number(ctx.users[i].balance);
         ctx.users[i].balance = currentBalance + Number(deposit);
+        const currentTransaction = datedTransaction(deposit);
+        console.log(`Current Transaction is ${JSON.stringify(currentTransaction)}`);
+        ctx.users[i].history.splice(0,0,currentTransaction);
         console.log(`New balance is ${ctx.users[i].balance}`);
         ctx.currentUser = ctx.users[i];
         setMessage(`Successfully deposited $${deposit}`)
