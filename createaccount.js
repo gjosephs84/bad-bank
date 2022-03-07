@@ -21,6 +21,9 @@ function CreateAccount() {
        if (!validate(email,     'email'))       return;
        if (!validate(password,  'password'))    return;
        ctx.users.push({name:name,email:email,password:password,balance:100,history:[]});
+       const newUserIndex = ctx.users.length - 1;
+       ctx.currentUser = ctx.users[newUserIndex];
+       ctx.userIndex = newUserIndex;
        setShow(false);
    }
    
@@ -50,7 +53,8 @@ function CreateAccount() {
                 </>
             ):(
                 <>
-                    <h5>Success</h5>
+                    <h5>Success! Welcome {ctx.currentUser.name}</h5>
+                    <p>Your account has been created, and you are now logged in.</p>
                     <button type="submit" className="btn btn-light" onClick={clearForm}>Add another account</button>
 
                 </>
