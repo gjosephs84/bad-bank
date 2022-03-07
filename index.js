@@ -1,6 +1,5 @@
 function Spa() {
 
-
     
 
     return (
@@ -18,6 +17,7 @@ function Spa() {
                 userIndex: null
                 }
             }>
+            
             <Route path="/" exact           component={Home}/>
             <Route path="/createaccount/"   component={CreateAccount}/>
             <Route path="/login/"           component={Login}/>

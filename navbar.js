@@ -1,4 +1,7 @@
 function NavBar() {
+    
+    const ctx = React.useContext(UserContext);
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -25,7 +28,7 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#AllData">All Data</a>
-                        </li>     
+                        </li>
                     </ul>
                 </div>
             </div>

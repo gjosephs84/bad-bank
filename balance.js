@@ -10,8 +10,16 @@ function Balance() {
     });
 
     function Transaction({t}) {
+        const date =`${t.month + 1}/${t.day}/${t.year}`;
+        const time =`${t.hour}:${t.minutes}:${t.seconds}`
+        let amount;
+        if (t.amount > 0) {
+            amount = `Deposit - $${t.amount}`
+        } else {
+            amount = `Withdrawal - $${t.amount}`
+        };
         return (
-            <div className="transaction">{t.amount} - {t.month}/{t.day}/{t.year} - {t.hour}:{t.minutes}:{t.seconds}</div>
+            <div className="transaction">{date} - {time} - {amount}</div>
         )
     }
     
